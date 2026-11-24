@@ -16,6 +16,77 @@ header{display:flex;align-items:center;justify-content:space-between;gap:8px;bor
 .stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr)) minmax(170px,2.1fr);gap:6px;margin:9px 0}.stat,.daily{border:3px ridge var(--gold);border-radius:15px;background:linear-gradient(145deg,#003a19,#001d0c);box-shadow:0 0 9px #ffe000;padding:6px 4px;text-align:center;min-width:0}.stat strong{display:block;color:#ffe343;font-size:clamp(10px,1.8vw,19px)}.stat span{font:bold clamp(16px,2.5vw,25px) Arial}.daily{display:flex;align-items:center;justify-content:space-around;gap:5px;text-align:left}.daily b{color:#ffe34b}.daily small{display:block;font:12px Arial}.daily button,.goldbtn{border:2px solid #fff28a;border-radius:10px;padding:8px 10px;background:linear-gradient(#ffe95a,#e5a900);font-weight:bold;color:#231900;cursor:pointer}
 .top-piles{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:var(--gap);margin:12px 1.5%;align-items:start}.pile{height:var(--cardh);min-height:65px;position:relative;border:2px solid rgba(255,215,0,.72);border-radius:12px;background:rgba(0,25,10,.22);box-shadow:inset 0 0 12px rgba(255,215,0,.12);touch-action:none}.pile.valid{box-shadow:0 0 15px 4px #ffe600,inset 0 0 12px #ffe600;border-color:#fff2a0}.pile-label{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(25px,5vw,52px);color:rgba(220,255,220,.55);pointer-events:none}.card{position:absolute;width:100%;height:var(--cardh);border-radius:9px;background:linear-gradient(145deg,#fff,#e8e8e8);border:2px solid #c9a83a;box-shadow:2px 4px 7px #0009;color:#111;user-select:none;touch-action:none;cursor:grab;overflow:hidden}.card.red{color:#e00012}.card.back{background:repeating-linear-gradient(45deg,#061a0c 0 5px,#163d20 5px 8px);border:4px double #ffd700;color:#ffd700;display:grid;place-items:center}.backinner{width:85%;height:88%;border:2px solid #ffd700;border-radius:5px;display:grid;place-items:center;text-align:center;font-weight:bold;text-shadow:0 1px 4px #000}.backinner .crest{font-size:clamp(24px,4vw,44px)}.corner{position:absolute;top:3px;left:5px;font:bold clamp(11px,2vw,21px) Georgia;line-height:1}.corner.right{top:auto;left:auto;right:5px;bottom:3px;transform:rotate(180deg)}.corner small{display:block;font-size:.75em}.pip{position:absolute;inset:22% 10% 20%;display:grid;place-items:center;font-size:clamp(23px,5.5vw,60px);font-weight:bold}.court{font-size:clamp(28px,5.6vw,58px);filter:drop-shadow(1px 2px 1px #777)}.watermark{position:absolute;bottom:4px;left:0;right:0;text-align:center;color:#7779;font:bold clamp(9px,1.5vw,15px) Georgia;letter-spacing:2px}.tableau{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:var(--gap);margin:16px 1.5% 12px;align-items:start;min-height:calc(var(--cardh) + 8px)}.column{position:relative;min-height:var(--cardh);border:1px dashed #ffdc5570;border-radius:10px;touch-action:none}.column .card{left:0}.selected{outline:3px solid #00ff87;box-shadow:0 0 16px #00ff87!important;z-index:50!important}.dragging{transform:scale(1.06) rotate(3deg);box-shadow:0 15px 24px #000b;z-index:1000!important;pointer-events:none}.hinted{animation:pulse .8s ease-in-out 3}@keyframes pulse{50%{box-shadow:0 0 20px 7px #ffeb00;outline:3px solid #fff}}.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:12px 0}.control{border:3px ridge var(--gold);border-radius:16px;padding:10px 13px;min-width:95px;background:linear-gradient(145deg,#00872c,#003817);color:white;font-weight:bold;font-size:clamp(12px,1.8vw,17px);text-shadow:0 2px 3px #000;box-shadow:0 0 9px #ffd700;cursor:pointer}.control:nth-child(2),.control:nth-child(5){background:linear-gradient(145deg,#8a00a8,#330052)}.control:nth-child(3),.control:nth-child(4){background:linear-gradient(145deg,#007ac7,#00335c)}.control:active,button:active{transform:scale(.97)}.themebar{display:flex;gap:5px;align-items:center}.theme{border:2px solid var(--gold);border-radius:50%;width:34px;height:34px;cursor:pointer}.theme[data-theme=green]{background:#07832c}.theme[data-theme=blue]{background:#087bc5}.theme[data-theme=purple]{background:#76209c}.theme[data-theme=black]{background:#161616}.ad-note{text-align:center;color:#e8e8c0;font:11px Arial;margin:8px 0}.ad-note ins{display:block;min-height:0}footer{margin-top:10px;text-align:center;border:3px ridge var(--gold);border-radius:22px;background:#001a0b;padding:9px;color:#ffe75a;font-weight:bold;text-shadow:0 2px 3px #000}.modal{display:none;position:fixed;inset:0;background:#000c;z-index:3000;align-items:center;justify-content:center;padding:16px}.modal.show{display:flex}.dialog{max-width:440px;width:100%;background:#fff;color:#1b1b1b;border:5px ridge var(--gold);border-radius:18px;padding:22px;text-align:center;box-shadow:0 0 30px #ffd700}.dialog h2{color:#795300}.dialog button{margin:6px}.dialog p{font:15px/1.5 Arial}.close{float:right;border:0;background:none;font-size:25px;cursor:pointer}#celebration{position:fixed;inset:0;pointer-events:none;z-index:2500}.toast{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:#111;color:#fff;border:1px solid var(--gold);border-radius:10px;padding:9px 14px;z-index:4000;display:none;font:14px Arial}.toast.show{display:block}.stockempty{font-size:28px;color:#c7ad37;display:grid;place-items:center;height:100%}
 @media(max-width:650px){.table{padding:5px 4px 9px}.stats{grid-template-columns:repeat(3,1fr)}.daily{grid-column:span 3;min-height:54px}.top-piles{margin:8px 1%;gap:4px}.tableau{margin:13px 1% 8px;gap:4px}.controls{gap:5px}.control{min-width:0;flex:1 1 27%;padding:9px 5px}.title{font-size:18px}.brand{font-size:11px}header{padding:6px}.theme{width:27px;height:27px}.pile{border-radius:7px}.card{border-radius:6px}.corner{left:3px;top:2px}.corner.right{right:3px;bottom:2px}}
+  /* DRAKE'S SOLITAIRE ROYAL EDITION */
+
+body {
+  background:
+    radial-gradient(ellipse at center, #087b25, #003d16 75%, #001b0a);
+}
+
+header {
+  border: 4px ridge #ffd700 !important;
+  box-shadow: 0 0 20px #ffd700;
+  background: linear-gradient(90deg, #003b16, #001b0b, #07501c);
+}
+
+.title {
+  color: #ffe66b;
+  text-shadow: 0 0 12px gold;
+  font-size: clamp(22px, 4vw, 42px);
+}
+
+.stat, .daily {
+  border: 3px ridge gold !important;
+  box-shadow: 0 0 12px #ffd700;
+  background: linear-gradient(145deg, #06451b, #001b0b);
+}
+
+.top-piles {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pile {
+  border: 3px ridge gold !important;
+  box-shadow: 0 0 13px #ffd700;
+  background: linear-gradient(145deg, #003b15, #075a20);
+  border-radius: 14px;
+}
+
+.card {
+  border: 3px double #d5aa28 !important;
+  border-radius: 11px;
+  box-shadow: 0 4px 10px #000a, 0 0 5px gold;
+}
+
+.card.back {
+  background: repeating-linear-gradient(
+    45deg, #071b0c, #071b0c 5px,
+    #174b20 5px, #174b20 10px
+  ) !important;
+  border: 4px double gold !important;
+}
+
+.control {
+  border: 4px ridge gold !important;
+  box-shadow: 0 0 12px #ffd700;
+  font-weight: bold;
+}
+
+footer {
+  border: 3px ridge gold;
+  box-shadow: 0 0 12px gold;
+}
+
+@media(max-width:650px) {
+  .top-piles {
+    gap: 5px;
+  }
+
+  .control {
+    padding: 9px 7px;
+  }
+                        }
 </style>
 </head>
 <body>
